@@ -28,7 +28,7 @@
     }
 	.signup-form{
 		width: 390px;
-		margin: 30px auto;
+		margin: 180px auto;
 	}
 	.signup-form form{
 		color: #999;
@@ -38,8 +38,8 @@
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
         padding: 30px;
     }
-	.signup-form h2 {
-		color: #333;
+	.signup-form h1 {
+		color: #FF5FA2;
 		font-weight: bold;
         margin-top: 0;
     }
@@ -91,7 +91,7 @@
 </head>
 <body>
 <div class="signup-form">
-    <form action="/examples/actions/confirmation.php" method="post">
+     <form method="POST" enctype="multipart/form-data" action="upload-handler.php">
 		<h1><b>Registration Form</b></h1>
 		<hr>
         <div class="form-group">
@@ -101,14 +101,14 @@
         	<input type="email" class="form-control" name="email" placeholder="Email Address" required="required">
         </div>
 		<div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+            <input type="password" class="form-control" name="password" placeholder="Password" onkeyup='check_pass();' onkeyup='check()' required="required">
         </div>
 		<div class="form-group">
-            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" required="required">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" onkeyup='check_pass();' onkeyup='check()' required="required">
         </div> 
         <div class="form-group">
-            <label for="fileSelect">Picture:</label>
-            <input type="file" name="photo" id="fileSelect">
+            <label for="fileSelect">Upload Image:</label>
+            <input type="file" name="fileSelect" id="fileSelect" class="form-control form-control-lg" required >
        
     </div>
     
